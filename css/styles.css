@@ -1,0 +1,229 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+}
+
+.container {
+    width: 100%;
+}
+
+.landing-top {
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.main-heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); 
+    font-size: 4.5rem;
+    line-height: 1.2;
+}
+
+.subheading {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #d3a79d;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.4px black;
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.4);
+    font-size: 1.1rem;
+    margin-top: -10px;
+    letter-spacing: 2px;
+}
+
+.description {
+    color: black;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    max-width: 800px;
+    margin-top: 10px;
+    padding: 10px;
+    line-height: 1.4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.nav-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-decoration: underline black;
+    font-size: 1.2rem;
+}
+
+.nav-item.active {
+    color: #d3a79d;
+    text-decoration: underline #d3a79d;
+}
+
+.nav-item::after {
+    content: '\2192';
+    position: absolute;
+    right: -5px;  
+    transition: transform 0.3s ease;
+}
+
+.nav-item.active::after {
+    content: '\2193';
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    background: url('../assets/Rectangle%2084.jpg') no-repeat center center/cover;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.hero-image {
+    display: none;
+}
+
+.hero-content {
+    position: relative;
+    left: 0;
+    background-image: url('../assets/Frame\ 442.png'); 
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    max-width: 600px;
+    text-align: left;
+    margin: 0 5%;
+}
+
+.hero-heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    font-size: 3rem;
+    margin: auto;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    font-family: 'Playfair Display', serif;
+    padding: 12px 24px;
+    background-color: #FBE0DA;
+    color: black;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.cta-button .arrow {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+/* mobile sizes */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .hero-content {
+        padding: 20px;
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .hero-heading {
+        font-size: 1.5rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .hero-content {
+        padding: 15px;
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .hero {
+        height: 50vh; 
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 10px 18px;
+    }
+
+    .nav-item {
+        font-size: 0.9rem;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        flex-direction: column;
+        height: 70vh; 
+        padding: 10px;
+    }
+
+    .hero-content {
+        padding: 15px;
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-item {
+        padding: 8px 16px;
+    }
+}
